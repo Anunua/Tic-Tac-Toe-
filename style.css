@@ -1,0 +1,126 @@
+:root {
+    --font-family: 'Roboto', sans-serif;
+    --bg-color: #F9ECD9;
+    --text-color: #494F56;
+    --primary-color: #85AFEC;
+    --primary-color-hover: #5B94E5;
+    --primary-color-active: #397DE0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.d-none {
+    display: none;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+header {
+    text-align: center;
+    padding: 36px 0;
+}
+
+h1 {
+    font-family: 'Eczar', serif;
+    font-weight: 700;
+    font-size: 48px;
+    text-shadow: 3px 3px var(--primary-color);
+}
+
+main {
+    max-width: 1200px;
+    padding: 64px 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+}
+
+.row[data-index="0"], .row[data-index="1"] {
+    border-bottom: 2px var(--primary-color) solid;
+}
+
+.tile[data-index="0"], .tile[data-index="1"] {
+    border-right: 2px var(--primary-color) solid;
+}
+
+.tile {
+    font-family: 'Eczar', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 700;
+    text-shadow: 0px 0px 3px rgba(133, 175, 236, 1);
+}
+
+.btn {
+    border: none;
+    cursor: pointer;
+    padding: 8px 24px;
+    font-size: 16px;
+    transition: all 0.2s;
+    border-radius: 4px;
+    font-weight: 500;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.btn--primary {
+    background-color: var(--primary-color);
+    border-right: 2px #4988E3 solid;
+    border-bottom: 2px #4988E3 solid;
+    color: #fff;
+}
+
+.btn--primary:hover {
+    background-color: var(--primary-color-hover);
+}
+
+.active, .btn--primary:active {
+    background-color: var(--primary-color-active);
+    border: none;
+}
+
+.active:hover {
+    background-color: var(--primary-color-active);
+    border: none;
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+    padding: 48px 0;
+}
+
+.controls {
+    display: flex;
+    gap: 16px;
+}
+
+.winner-display {
+    height: 40px;
+    font-size: 24px;
+    font-weight: 300;
+    text-shadow: 0px 0px 3px rgba(133, 175, 236, 1);
+}
+
+.icon {
+    font-size:19px;
+}
